@@ -9,7 +9,7 @@ import cors from "cors";
 config()
 //middlewares
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://login-app-frontend-psi.vercel.app");
+  res.setHeader("Access-Control-Allow-Origin", process.env.FRONTED_URL);
 
   res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
